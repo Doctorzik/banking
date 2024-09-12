@@ -6,8 +6,9 @@ import Image from 'next/image'
 import { usePathname } from 'next/navigation'
 import React from 'react'
 import { Key } from 'lucide-react'
+import Footer from './ui/Footer'
 
-const SideBar = ({ user }: SiderbarProps) => {
+const SideBar = ({ user, type="desktop"} : SiderbarProps) => {
     const pathname = usePathname()
     return (
         <section className="sidebar">
@@ -53,7 +54,7 @@ const SideBar = ({ user }: SiderbarProps) => {
 
                 USER
             </nav>
-            FOOTER
+            <Footer user={user} />
         </section >
     )
 }
